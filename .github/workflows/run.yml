@@ -30,8 +30,8 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Actifacts publish
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: g11n-result
-          path: detail.csv
+      if: ${{ failure() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: g11n-result
+        path: detail.csv
